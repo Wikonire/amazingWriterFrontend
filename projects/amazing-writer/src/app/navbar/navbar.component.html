@@ -1,0 +1,19 @@
+<header>
+  <nav class="navbar navbar-expand-md" appScrollColor>
+    <div class="container">
+      <div>
+        <a class="navbar-brand override" routerLink="/">
+          log
+        </a>
+        <span>{{title}}</span>
+      </div>
+      <div class="nav-toggle" [class.drawer-open]="isDrawerOpen" id="nav-toggle" (click)="toggleNavDrawer(!isDrawerOpen)">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <app-nav-drawer [isDrawerOpen]="isDrawerOpen" (drawerToggleEmitter)="toggleNavDrawer($event)" [navItems]="menuItems"></app-nav-drawer>
+    </div>
+  </nav>
+</header>

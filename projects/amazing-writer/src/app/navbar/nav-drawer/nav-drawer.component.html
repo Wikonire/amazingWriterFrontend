@@ -1,0 +1,6 @@
+<ul id="navbar-list" class="navbar-nav override" *ngFor="let navItem of navItems">
+    <li class="nav-item override" (click)="onNavLinkClicked($event, navItem)">
+    <a routerLink="{{navItem.href}}" class="nav-link override" id="">{{navItem.title}}</a>
+    </li>
+</ul>
+<span class="drawer-inset-shadow"></span>

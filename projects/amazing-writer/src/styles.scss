@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+@use "styles/shady-colors";
+
+@function createThemes($amount) {
+  @if $amount>360 {
+    @error "`#{inspect($amount)}` is not a valid value. max number is 360`.";
+  }
+  $color-steps: floor(360/$amount);
+  $max-amount: 360/$color-steps;
+  $themes: ();
+  @for $i from 1 through ($amount) {
+    $theme-colors: shady-colors.palette($i*$color-steps);
+    $themes: map-merge($themes,($i*$color-steps:$theme-colors));
+  }
+  @return $themes;
+}
+
+@function createTheme($base-color) {
+  @if type-of($base-color)!=number {
+    @error "`#{inspect($base-color)}` is not a valid value. It must be a number`.";
+  } @else if $base-color>360 {
+    @error "`#{inspect($base-color)}` is not a valid value. It must be in the range of 0-360`.";
+  }
+  $theme-color: shady-colors.palette($base-color);
+  @return $theme-color;
+}
+
+div.color-i > div {
+ $global-variable: createTheme(240);
+}
+
+
+/*
+($0: ($primary-dark: #660000, $primary-light: #cc0000, $accent-dark: #ff3333, $accent-light: #ff9999),
+$16: ($primary-dark: #661b00, $primary-light: #cc3600, $accent-dark: #ff6933, $accent-light: #ffb499)
+$32: ($primary-dark: #663600, $primary-light: #cc6d00, $accent-dark: #ffa033, $accent-light: #ffcf99)
+$48: ($primary-dark: #665200, $primary-light: #cca300, $accent-dark: #ffd633, $accent-light: #ffeb99)
+$64: ($primary-dark: #5f6600, $primary-light: #becc00, $accent-dark: #f1ff33, $accent-light: #f8ff99)
+$80: ($primary-dark: #446600, $primary-light: #88cc00, $accent-dark: #bbff33, $accent-light: #ddff99)
+$96: ($primary-dark: #296600, $primary-light: #52cc00, $accent-dark: #85ff33, $accent-light: #c2ff99)
+$112: ($primary-dark: #0e6600, $primary-light: #1bcc00, $accent-dark: #4eff33, $accent-light: #a7ff99)
+$128: ($primary-dark: #00660e, $primary-light: #00cc1b, $accent-dark: #33ff4e, $accent-light: #99ffa7)
+$144: ($primary-dark: #006629, $primary-light: #00cc52, $accent-dark: #33ff85, $accent-light: #99ffc2)
+$160: ($primary-dark: #006644, $primary-light: #00cc88, $accent-dark: #33ffbb, $accent-light: #99ffdd)
+$176: ($primary-dark: #00665f, $primary-light: #00ccbe, $accent-dark: #33fff1, $accent-light: #99fff8)
+$192: ($primary-dark: #005266, $primary-light: #00a3cc, $accent-dark: #33d6ff, $accent-light: #99ebff)
+$208: ($primary-dark: #003666, $primary-light: #006dcc, $accent-dark: #33a0ff, $accent-light: #99cfff)
+$224: ($primary-dark: #001b66, $primary-light: #0036cc, $accent-dark: #3369ff, $accent-light: #99b4ff)
+$240: ($primary-dark: #000066, $primary-light: #0000cc, $accent-dark: #3333ff, $accent-light: #9999ff)
+$256: ($primary-dark: #1b0066, $primary-light: #3600cc, $accent-dark: #6933ff, $accent-light: #b499ff)
+$272: ($primary-dark: #360066, $primary-light: #6d00cc, $accent-dark: #a033ff, $accent-light: #cf99ff)
+$288: ($primary-dark: #520066, $primary-light: #a300cc, $accent-dark: #d633ff, $accent-light: #eb99ff)
+$304: ($primary-dark: #66005f, $primary-light: #cc00be, $accent-dark: #ff33f1, $accent-light: #ff99f8)
+$320: ($primary-dark: #660044, $primary-light: #cc0088, $accent-dark: #ff33bb, $accent-light: #ff99dd)
+$336: ($primary-dark: #660029, $primary-light: #cc0052, $accent-dark: #ff3385, $accent-light: #ff99c2)
+$352: ($primary-dark: #66000e, $primary-light: #cc001b, $accent-dark: #ff334e, $accent-light: #ff99a7))
+*/
+
+//such as components
+
+
+
+
+
+
+
