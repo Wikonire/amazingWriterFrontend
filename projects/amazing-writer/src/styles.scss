@@ -1,6 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @use "styles/shady-colors";
 
+$primary-hls-degree: 230;
+$primary-theme:createTheme($primary-hls-degree)!default;
+$primary-dark:shady-colors.primary-dark($primary-theme)!default;
+$primary-light:shady-colors.primary-light($primary-theme)!default;
+$accent-dark:shady-colors.accent-dark($primary-theme)!default;
+$accent-light:shady-colors.accent-light($primary-theme)!default;
+
 @function createThemes($amount) {
   @if $amount>360 {
     @error "`#{inspect($amount)}` is not a valid value. max number is 360`.";
