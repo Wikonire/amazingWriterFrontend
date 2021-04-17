@@ -7,11 +7,12 @@ import {Title} from '@angular/platform-browser';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public constructor(private titleService: Title) { }
   name = 'NavigationBarProject';
-
   @HostBinding('class.drawer-open')
   isDrawerOpen = false;
+
+  public constructor(private titleService: Title) {
+  }
 
   toggleDrawer(isDrawerOpen: boolean): void {
     this.isDrawerOpen = isDrawerOpen;

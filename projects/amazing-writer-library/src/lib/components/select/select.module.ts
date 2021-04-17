@@ -1,8 +1,8 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {NgModule} from '@angular/core';
 import {AwSelectComponent} from './aw-select.component';
 import {FormsModule} from '@angular/forms';
-import { AwSelectDirective } from './aw-select.directive';
+import {AwSelectDirective} from './aw-select.directive';
 
 
 @NgModule({
@@ -13,4 +13,5 @@ import { AwSelectDirective } from './aw-select.directive';
   exports: [AwSelectComponent, AwSelectDirective],
   declarations: [AwSelectComponent, AwSelectDirective]
 })
-export class SelectModule { }
+export class SelectModule {
+}

@@ -5,9 +5,9 @@ import {SettingsComponent} from '../settings/settings.component';
 import {INavRoute} from '../shared/interfaces/inav-route';
 
 export const navbarRoutesConfig: Routes = [
-  { path: 'profile', component: ProfileComponent, data: {title: 'Profile'}},
-  { path: 'settings', component: SettingsComponent, data: {title: 'Settings'}},
-  { path: '**', component: HomeComponent, data: {title: 'Home'}},
+  {path: 'profile', component: ProfileComponent, data: {title: 'Profile'}},
+  {path: 'settings', component: SettingsComponent, data: {title: 'Settings'}},
+  {path: '**', component: HomeComponent, data: {title: 'Home'}},
 ];
 
 export const navbarMenuConfig: INavRoute[] = [

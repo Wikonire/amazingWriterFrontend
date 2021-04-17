@@ -1,4 +1,4 @@
-import {Component, EventEmitter, HostListener, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import {INavRoute} from '../shared/interfaces/inav-route';
 import {navbarMenuConfig} from './navbarRoutesConfig';
@@ -11,32 +11,32 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private titleService: Title, private activeRoute: ActivatedRoute) { }
-
   public title: string;
-
- // @ViewChild('navbar') navElement: HTMLElement;
-
   menuItems: INavRoute[] = navbarMenuConfig;
-  isDrawerOpen: boolean;
 
+  // @ViewChild('navbar') navElement: HTMLElement;
+  isDrawerOpen: boolean;
   @Output()
   drawerToggleEmitter: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  private setTitle(): void {
-    if (this.title) {
-      this.titleService.getTitle();
-    }
+  constructor(private titleService: Title, private activeRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     this.isDrawerOpen = false;
     this.setTitle();
   }
+
   toggleNavDrawer(isDrawerOpen: boolean): void {
     this.isDrawerOpen = isDrawerOpen;
     this.drawerToggleEmitter.emit(this.isDrawerOpen);
 
+  }
+
+  private setTitle(): void {
+    if (this.title) {
+      this.titleService.getTitle();
+    }
   }
 
 }

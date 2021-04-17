@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'aw-amazing-writer-library',
@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
       amazing-writer-library works!
     </p>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class AmazingWriterLibraryComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {NavbarComponent} from './navbar.component';
 import {NavDrawerModule} from './nav-drawer/nav-drawer.module';
 import {ScrollColorDirective} from '../shared/directives/scroll-color/scroll-color.directive';
-
 
 
 @NgModule({
@@ -15,4 +14,5 @@ import {ScrollColorDirective} from '../shared/directives/scroll-color/scroll-col
   ],
   exports: [NavbarComponent]
 })
-export class NavbarModule { }
+export class NavbarModule {
+}

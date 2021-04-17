@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {NavDrawerComponent} from './nav-drawer.component';
 import {RouterModule} from '@angular/router';
 
@@ -15,4 +15,5 @@ import {RouterModule} from '@angular/router';
     NavDrawerComponent
   ]
 })
-export class NavDrawerModule { }
+export class NavDrawerModule {
+}

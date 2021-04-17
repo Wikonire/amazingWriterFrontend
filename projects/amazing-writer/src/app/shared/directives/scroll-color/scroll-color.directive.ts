@@ -1,14 +1,15 @@
-import {Directive, ElementRef, HostListener, Input, OnChanges, OnInit, Renderer2, SimpleChanges} from '@angular/core';
+import {Directive, ElementRef, HostListener, Input, OnChanges, Renderer2, SimpleChanges} from '@angular/core';
 
 @Directive({
   selector: '[appScrollColor]'
 })
-export class ScrollColorDirective implements OnChanges{
+export class ScrollColorDirective implements OnChanges {
+
+  @Input() color?: 'rgb( 255 , 255, 255, 0)';
 
   constructor(private renderer: Renderer2,
-              private elementRef: ElementRef) { }
-
-              @Input() color?: 'rgb( 255 , 255, 255, 0)';
+              private elementRef: ElementRef) {
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     this.addStyle(this.color);

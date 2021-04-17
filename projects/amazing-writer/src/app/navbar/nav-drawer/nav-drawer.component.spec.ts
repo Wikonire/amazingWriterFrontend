@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { NavDrawerComponent } from './nav-drawer.component';
+import {NavDrawerComponent} from './nav-drawer.component';
 
 describe('NavDrawerComponent', () => {
   let component: NavDrawerComponent;
@@ -8,9 +8,9 @@ describe('NavDrawerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavDrawerComponent ]
+      declarations: [NavDrawerComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

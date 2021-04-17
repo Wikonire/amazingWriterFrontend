@@ -14,7 +14,8 @@ export class NavDrawerComponent implements OnInit {
   @Output() drawerToggleEmitter: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Input() navItems: INavRoute[];
 
-  constructor(private titleService: Title) { }
+  constructor(private titleService: Title) {
+  }
 
   ngOnInit(): void {
   }

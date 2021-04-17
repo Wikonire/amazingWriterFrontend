@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { AmazingWriterLibraryService } from './amazing-writer-library.service';
+import {AmazingWriterLibraryService} from './amazing-writer-library.service';
 
 describe('AmazingWriterLibraryService', () => {
   let service: AmazingWriterLibraryService;

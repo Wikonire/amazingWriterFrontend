@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-expand-md" appScrollColor>
+  <nav appScrollColor class="navbar navbar-expand-md">
     <div class="container">
       <div>
         <a class="navbar-brand override" routerLink="/">
@@ -7,13 +7,15 @@
         </a>
         <span>{{title}}</span>
       </div>
-      <div class="nav-toggle" [class.drawer-open]="isDrawerOpen" id="nav-toggle" (click)="toggleNavDrawer(!isDrawerOpen)">
+      <div (click)="toggleNavDrawer(!isDrawerOpen)" [class.drawer-open]="isDrawerOpen" class="nav-toggle"
+           id="nav-toggle">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <app-nav-drawer [isDrawerOpen]="isDrawerOpen" (drawerToggleEmitter)="toggleNavDrawer($event)" [navItems]="menuItems"></app-nav-drawer>
+      <app-nav-drawer (drawerToggleEmitter)="toggleNavDrawer($event)" [isDrawerOpen]="isDrawerOpen"
+                      [navItems]="menuItems"></app-nav-drawer>
     </div>
   </nav>
 </header>

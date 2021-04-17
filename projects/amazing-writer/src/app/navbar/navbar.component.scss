@@ -30,11 +30,11 @@
 }
 
 .nav-toggle:hover {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .nav-toggle span:nth-child(1) {
-  top:26%;
+  top: 26%;
 }
 
 .nav-toggle span:nth-child(2) {
@@ -52,7 +52,7 @@
 }
 
 .nav-toggle.drawer-open span:nth-child(1) {
-  top:50%;
+  top: 50%;
   left: 50%;
   width: 0%;
   opacity: 0;
@@ -69,7 +69,7 @@
 }
 
 .nav-toggle.drawer-open span:nth-child(4) {
-  bottom:50%;
+  bottom: 50%;
   left: 50%;
   width: 0%;
   opacity: 0;
