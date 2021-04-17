@@ -1,6 +1,6 @@
 @use "./shady-theme-factory";
 
-$crimson-theme : shady-theme-factory.createTheme(348);
+$crimson-theme: shady-theme-factory.createTheme(348);
 $color: hsl(348, 83%, 47%);
 $dark-slate-blue-theme: shady-theme-factory.createTheme(248);
 $color: hsl(248, 39%, 39%);

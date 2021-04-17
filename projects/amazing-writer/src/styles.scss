@@ -1,19 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @use "./styleguide/colors";
 
-$implementation-color-hue:240;
+$implementation-color-hue: 240;
 
 .test {
-  color:  colors.$primary-dark;
+  color: colors.$primary-dark;
 }
 
 $primary-hls-degree: 230;
-$primary-theme:shady-colors.createTheme($primary-hls-degree)!default;
+$primary-theme: shady-colors.createTheme($primary-hls-degree) !default;
 @debug $primary-theme;
 @debug "halloWorld";
-
-
-
 
 
 /*
