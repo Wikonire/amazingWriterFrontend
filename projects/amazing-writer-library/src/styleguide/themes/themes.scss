@@ -1,4 +1,4 @@
-@use "./shady-theme-factory";
+@use "src/styleguide/themes/shady-theme-factory";
 
 $crimson-theme: shady-theme-factory.createTheme(348);
 $color: hsl(348, 83%, 47%);

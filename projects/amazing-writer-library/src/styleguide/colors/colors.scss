@@ -1,3 +1,5 @@
+@use "src/styleguide/colors/shady-colors-factory" as shady-colors;
+$primary-theme();
 $primary-dark: shady-colors.primary-dark($primary-theme) !default;
 $primary-light: shady-colors.primary-light($primary-theme) !default;
 $accent-dark: shady-colors.accent-dark($primary-theme) !default;

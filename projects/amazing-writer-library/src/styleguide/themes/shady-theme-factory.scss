@@ -1,25 +1,25 @@
 $theme-keys: 'light' 'base' 'dark';
 
-@function lightest($darkest-color) {
+@function createTheme($base-color) {
 
 }
 
 
-@function lightest($theme-key) {
+@function light($theme-key) {
   @if not map-has-key($theme-key, 'light') {
     @warn "`#{inspect($theme-key)}` doesn't seem to have a key named `light`.";
   }
   @return map-get($theme-key, 'light');
 }
 
-@function lightest($theme-key) {
+@function base($theme-key) {
   @if not map-has-key($theme-key, 'base') {
     @warn "`#{inspect($theme-key)}` doesn't seem to have a key named `base`.";
   }
   @return map-get($theme-key, 'base');
 }
 
-@function lightest($theme-key) {
+@function dark($theme-key) {
   @if not map-has-key($theme-key, 'dark') {
     @warn "`#{inspect($theme-key)}` doesn't seem to have a key named `dark`.";
   }

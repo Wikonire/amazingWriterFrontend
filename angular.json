@@ -156,7 +156,10 @@
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/amazing-writer-library/tsconfig.lib.json",
-            "project": "projects/amazing-writer-library/ng-package.json"
+            "project": "projects/amazing-writer-library/ng-package.json",
+            "styles": [
+              "projects/amazing-writer-library/src/styles.scss"
+            ]
           },
           "configurations": {
             "production": {

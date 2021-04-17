@@ -1,3 +1,4 @@
+@use "src/styleguide/colors/shady-colors-factory" as shady-colors;
 @function createShadyColorPalettes($amount) {
   @if $amount>360 {
     @error "`#{inspect($amount)}` is not a valid value. max number is 360`.";
