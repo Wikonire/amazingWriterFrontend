@@ -1,0 +1,13 @@
+@use "./shady-theme-factory";
+
+$crimson-theme : shady-theme-factory.createTheme(348);
+$color: hsl(348, 83%, 47%);
+$dark-slate-blue-theme: shady-theme-factory.createTheme(248);
+$color: hsl(248, 39%, 39%);
+$plum-theme: shady-theme-factory.createTheme(300);
+$color: hsl(300, 47%, 75%);
+$rebecca-purple: shady-theme-factory.createTheme(270);
+$color: hsl(270, 50%, 40%);
+$indigo-theme: shady-theme-factory.createTheme(275);
+$fire-brick-theme: shady-theme-factory.createTheme(0);
+$orange-theme: shady-theme-factory.createTheme(39);

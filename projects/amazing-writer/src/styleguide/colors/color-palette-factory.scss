@@ -1,0 +1,25 @@
+
+
+@function createShadyColorPalettes($amount) {
+  @if $amount>360 {
+    @error "`#{inspect($amount)}` is not a valid value. max number is 360`.";
+  }
+  $color-steps: floor(360/$amount);
+  $max-amount: 360/$color-steps;
+  $themes: ();
+  @for $i from 1 through ($amount) {
+    $theme-colors: shady-colors.palette($i*$color-steps);
+    $themes: map-merge($themes,($i*$color-steps:$theme-colors));
+  }
+  @return $themes;
+}
+
+@function createShadyColorPalette($base-color) {
+  @if type-of($base-color)!=number {
+    @error "`#{inspect($base-color)}` is not a valid value. It must be a number`.";
+  } @else if $base-color>360 {
+    @error "`#{inspect($base-color)}` is not a valid value. It must be in the range of 0-360`.";
+  }
+  $theme-color: shady-colors.palette($base-color);
+  @return $theme-color;
+}

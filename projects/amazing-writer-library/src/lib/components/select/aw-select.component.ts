@@ -9,7 +9,6 @@ import {Observable} from 'rxjs';
 })
 export class AwSelectComponent<IOptionListType> implements OnInit {
   public template: TemplateRef<IListOptionContext<IOptionListType>>;
-  public showAll: boolean;
 
   @Input() public data: IOptionList|IOptions|string[];
 
@@ -17,9 +16,9 @@ export class AwSelectComponent<IOptionListType> implements OnInit {
   size?: number;
 
   ngOnInit(): void {
-    if (!this.size) {
-      this.
-    }
+   console.log(this.data);
+   console.log(typeof this.data);
+   console.log(typeof this.data)
   }
 
   setItemTemplate(templateRef: TemplateRef<IListOptionContext<IOptionListType>>): void {

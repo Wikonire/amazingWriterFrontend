@@ -26,7 +26,7 @@ export interface IListOptionContext<IOptionListType> {
 }
 
 @Directive({
-  selector: '[awSelect]'
+  selector: '[aw-select]'
 })
 export class AwSelectDirective<IOptionListType> {
 

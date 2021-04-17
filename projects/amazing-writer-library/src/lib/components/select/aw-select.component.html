@@ -4,5 +4,5 @@
 
 
 <select *ngFor="let option of data.slice(0,limit); index as i">
-  <ng-container *ngTemplateOutlet="template; context: {$implicit: option, index: i}"></ng-container>
+  <ng-container *ngTemplateOutlet="template; context: {$implicit: option, index: i}"><p>{{i}}</p></ng-container>
 </select>
